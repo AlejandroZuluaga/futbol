@@ -1,4 +1,7 @@
 export class Equipo {
     constructor(
-        public name) { }
+        public nombre,
+        public dt,
+        public calendario
+    ) { }
 }

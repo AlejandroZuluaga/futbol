@@ -6,6 +6,7 @@ import { EquipoModule } from './equipo/equipo.module';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './equipo/index/index.component';
+import { ListEquipoComponent } from './equipo/list-equipo/list-equipo.component';
 import { AddEquipoComponent } from './equipo/add-equipo/add-equipo.component';
 import { CurrentOptionComponent } from './current-option/current-option.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -44,6 +45,7 @@ import {
 } from '@angular/material';
 const appRoutes: Routes = [
   { path: 'equipo/index', component: IndexComponent },
+  { path: 'equipo/list', component: ListEquipoComponent },
   { path: 'equipo/add', component: AddEquipoComponent },
 
 ];
@@ -56,6 +58,7 @@ const appRoutes: Routes = [
     CurrentOptionComponent
   ],
   imports: [
+
     BrowserModule,
     BrowserAnimationsModule,
     EquipoModule,

@@ -1,39 +1,25 @@
 <div>
   <mat-toolbar color="primary">
-      <div> <h2>Futbol  </h2></div>
+      <div> <h2>Futbol</h2></div>
       <div>
           <button type="submit" mat-button [matMenuTriggerFor]="Menu" >  Menú 
                 <mat-icon class="mat-48" aria-label="icon">reorder</mat-icon>
                   </button>
           <mat-menu #Menu="matMenu">
-            <button mat-menu-item [matMenuTriggerFor]="equipos">Equipos</button>
-            <button mat-menu-item [matMenuTriggerFor]="resultados">Resultados</button>
+            <button mat-menu-item type="submit" [matMenuTriggerFor]="equipos">Equipos</button>
+            <button mat-menu-item type="submit" [matMenuTriggerFor]="resultados">Resultados</button>
           </mat-menu>
           <mat-menu #equipos="matMenu">
             <button mat-menu-item routerLink="equipo/add">Nuevo Equipo</button>
-            <button mat-menu-item routerLink="equipo/index">Listar Equipos </button>
+            <button mat-menu-item routerLink="equipo/list">Listar Equipos </button>
           </mat-menu>
       
           <mat-menu #resultados="matMenu">
             <button mat-menu-item routerLink="equipo/add">Nuevo Resultado</button>
-            <button mat-menu-item routerLink="equipo/index">Listar Resultados </button>
+            <button mat-menu-item routerLink="equipo/list">Listar Resultados </button>
           </mat-menu>
         </div>
 
   </mat-toolbar>
 
 </div>
-
-<mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav class="example-sidenav" mode="push" align="start" opened="false">
-  </mat-sidenav>
-  <div class="example-sidenav-content">
-
-  </div>
-  <div>
-    <button type="submit" mat-button (click)="sidenav.open()">Sidenav
-        <mat-icon class="mat-24" aria-label="icon">list</mat-icon>
-      </button>
-  </div>
- 
-</mat-sidenav-container>
