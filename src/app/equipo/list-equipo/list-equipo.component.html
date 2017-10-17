@@ -1,3 +1,4 @@
+<!--
 <div class="example-container mat-elevation-z8">
   <div class="example-header">
     <mat-form-field floatPlaceholder="never">
@@ -24,4 +25,17 @@
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
+</div>
+-->
+
+<h3 align="center">{{titulo}}</h3>
+<hr/>
+<div *ngIf="!equipo">cragando listado de equipos...</div>
+<div *ngIf="equipo">
+  <ul>
+    <li *ngFor='let eqp of equipo'>
+      <strong>{{eqp.nombreequipo}}</strong>
+      <p> {{eqp.directortecnico}}</p>
+    </li>
+  </ul>
 </div>

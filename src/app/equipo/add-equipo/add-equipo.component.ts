@@ -10,9 +10,9 @@ export class AddEquipoComponent implements OnInit {
   emailFormControl = new FormControl('', [
     Validators.required]);
 
-  public equipo: Equipo;
+  public equipoadd: Equipo;
   constructor() {
-    this.equipo = new Equipo('Once Caldas', 'Maturana', '2 ');
+    this.equipoadd = new Equipo('3', 'Once Caldas', 'Maturana', '2');
   }
   ngOnInit() {
   }

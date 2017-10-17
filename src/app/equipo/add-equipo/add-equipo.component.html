@@ -3,7 +3,7 @@
     <tr>
       <td>
         <mat-form-field class='example-full-width'>
-          <input required matInput placeholder="Nombre Equipo" [(ngModel)]="equipo.nombre" name="nombre" #nombre="ngModel" />
+          <input required matInput placeholder="Nombre Equipo" [(ngModel)]="equipoadd.nombre" name="nombre" #nombre="ngModel" />
           <mat-error [hidden]="nombre.valid || nombre.pristine">
             Campo requerido
           </mat-error>
@@ -13,7 +13,7 @@
     <tr>
       <td>
         <mat-form-field class='example-full-width'>
-          <input required matInput placeholder="Nombre Tecnico" [(ngModel)]="equipo.dt" name="dt" #dt="ngModel" />
+          <input required matInput placeholder="Nombre Tecnico" [(ngModel)]="equipoadd.dt" name="dt" #dt="ngModel" />
           <mat-error [hidden]="dt.valid || dt.pristine">
             Campo requerido
           </mat-error>
@@ -23,7 +23,7 @@
     <tr>
       <td>
         <mat-form-field class='example-full-width'>
-          <input required matInput placeholder="id calendario" [(ngModel)]="equipo.calendario" name="calendario" #calendario="ngModel" />
+          <input required matInput placeholder="id calendario" [(ngModel)]="equipoadd.calendario" name="calendario" #calendario="ngModel" />
           <mat-error [hidden]="calendario.valid || calendario.pristine">
             Campo requerido
           </mat-error>

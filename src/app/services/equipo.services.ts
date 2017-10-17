@@ -5,7 +5,6 @@ import { Observable } from 'rxjs/Observable';
 import { Equipo } from '../equipo/equipo';
 
 @Injectable()
-
 export class EquipoServices {
     public url: string;
 

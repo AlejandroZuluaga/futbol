@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
 import { AppComponent } from './app.component';
+import { HttpModule} from '@angular/http';
 import { EquipoModule } from './equipo/equipo.module';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -58,7 +59,7 @@ const appRoutes: Routes = [
     CurrentOptionComponent
   ],
   imports: [
-
+    HttpModule,
     BrowserModule,
     BrowserAnimationsModule,
     EquipoModule,
