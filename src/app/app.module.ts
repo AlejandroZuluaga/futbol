@@ -6,6 +6,7 @@ import { HttpModule} from '@angular/http';
 import { EquipoModule } from './equipo/equipo.module';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
+import { EquipoServices } from './services/equipo.services';
 import { IndexComponent } from './equipo/index/index.component';
 import { ListEquipoComponent } from './equipo/list-equipo/list-equipo.component';
 import { AddEquipoComponent } from './equipo/add-equipo/add-equipo.component';
@@ -97,7 +98,7 @@ const appRoutes: Routes = [
       appRoutes
     )
   ],
-  providers: [],
+  providers: [EquipoServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

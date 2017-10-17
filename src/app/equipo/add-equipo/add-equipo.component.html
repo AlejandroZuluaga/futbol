@@ -1,9 +1,9 @@
-<form #addForm=ngForm>
+<form #addForm=ngForm (ngSubmit)="onSave()" id="from-equipo">
   <table>
     <tr>
       <td>
         <mat-form-field class='example-full-width'>
-          <input required matInput placeholder="Nombre Equipo" [(ngModel)]="equipoadd.nombre" name="nombre" #nombre="ngModel" />
+          <input required matInput placeholder="Nombre Equipo" [(ngModel)]="equipoadd.nombreequipo" name="nombre" #nombre="ngModel" />
           <mat-error [hidden]="nombre.valid || nombre.pristine">
             Campo requerido
           </mat-error>
@@ -13,7 +13,7 @@
     <tr>
       <td>
         <mat-form-field class='example-full-width'>
-          <input required matInput placeholder="Nombre Tecnico" [(ngModel)]="equipoadd.dt" name="dt" #dt="ngModel" />
+          <input required matInput placeholder="Nombre Tecnico" [(ngModel)]="equipoadd.directortecnico" name="dt" #dt="ngModel" />
           <mat-error [hidden]="dt.valid || dt.pristine">
             Campo requerido
           </mat-error>
@@ -23,7 +23,7 @@
     <tr>
       <td>
         <mat-form-field class='example-full-width'>
-          <input required matInput placeholder="id calendario" [(ngModel)]="equipoadd.calendario" name="calendario" #calendario="ngModel" />
+          <input required matInput placeholder="id calendario" [(ngModel)]="equipoadd.idcalendario" name="calendario" #calendario="ngModel" />
           <mat-error [hidden]="calendario.valid || calendario.pristine">
             Campo requerido
           </mat-error>
@@ -31,8 +31,8 @@
       </td>
     </tr>
   </table>
+  <div class="button_row">
+      <button [disabled]="!addForm.valid" mat-raised-button color="primary">Guardar</button>
+    </div>
 </form>
 
-<div class="button_row">
-  <button [disabled]="!addForm.valid" mat-raised-button color="primary">Guardar</button>
-</div>

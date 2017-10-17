@@ -30,10 +30,10 @@
 
 <h3 align="center">{{titulo}}</h3>
 <hr/>
-<div *ngIf="!equipo">cragando listado de equipos...</div>
-<div *ngIf="equipo">
+<div *ngIf="equipo">cragando listado de equipos...</div>
+<div *ngIf="!equipo">
   <ul>
-    <li *ngFor='let eqp of equipo'>
+    <li *ngFor="let eqp of equipo">
       <strong>{{eqp.nombreequipo}}</strong>
       <p> {{eqp.directortecnico}}</p>
     </li>

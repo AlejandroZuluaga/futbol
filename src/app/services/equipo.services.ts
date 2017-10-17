@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, Response, RequestOptions } from '@angular/http';
+import { Http, Response, RequestOptions, RequestOptionsArgs } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 import { Equipo } from '../equipo/equipo';
@@ -17,5 +17,10 @@ export class EquipoServices {
     getEquipo() {
         return this._http.get(this.url).map(res => res.json());
     }
-
+    addEquipo(equipoAdd: Equipo) {
+        const json = JSON.stringify(equipoAdd);
+        const params = json;
+        const headers = new Headers({ 'content-type': 'application/json' });
+        return this._http.post(this.url, params, ).map(res => res.json());
+    }
 }

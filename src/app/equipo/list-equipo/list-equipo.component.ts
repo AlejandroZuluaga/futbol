@@ -35,11 +35,12 @@ export class ListEquipoComponent implements OnInit {
     this._equipoServices.getEquipo().subscribe(
       result => {
 
-        if (result.code !== 200) {
-          console.log(result);
-        } else {
+        if (result.code === 200) {
+
           this.equipo = result.data;
+        } else {
           console.log(result);
+
         }
       },
       error => {

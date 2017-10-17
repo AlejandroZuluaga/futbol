@@ -1,8 +1,8 @@
 export class Equipo {
     constructor(
-        public idequipo: string ,
+        public idequipo: number ,
         public nombreequipo: string,
         public directortecnico: string,
-        public idcalendario: string
+        public idcalendario: number
     ) { }
 }
