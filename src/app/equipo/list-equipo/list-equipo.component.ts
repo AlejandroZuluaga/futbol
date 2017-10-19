@@ -35,17 +35,16 @@ export class ListEquipoComponent implements OnInit {
     this._equipoServices.getEquipo().subscribe(
       result => {
 
-        if (result.code === 200) {
-
-          this.equipo = result.data;
-        } else {
+        // tslint:disable-next-line:triple-equals
+        if (result.code != 200) {
           console.log(result);
-
+        } else {
+          this.equipo = result.data;
+          console.log(result.data);
         }
       },
       error => {
         console.log(<any>error);
-
       }
     );
 
