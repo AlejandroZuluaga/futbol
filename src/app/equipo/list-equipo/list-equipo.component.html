@@ -32,10 +32,10 @@
 
 
 <hr/>
-<div *ngIf="!equipo">cragando listado de equipos...</div>
-<div *ngIf="equipo">
+
+<div >
   <ul>
-    <li *ngFor="let eqp of equipo">
+    <li *ngFor="let eqp of equipoServices.equipoList ">
       <strong>{{eqp.nombreequipo}}</strong>
       <p> {{eqp.directortecnico}}</p>
     </li>

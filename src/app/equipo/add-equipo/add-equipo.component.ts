@@ -9,35 +9,25 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./add-equipo.component.css']
 })
 export class AddEquipoComponent implements OnInit {
+  equipo: Equipo;
   emailFormControl = new FormControl('', [
     Validators.required]);
 
   public equipoadd: Equipo;
   constructor(
-    private _equipoServices: EquipoServices,
-    private _route: ActivatedRoute,
-    private _router: Router
-  ) {
-    this.equipoadd = new Equipo(8, 'Cali', 'Carvajal', 5);
-  }
+    private equipoServices: EquipoServices,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
   ngOnInit() {
+    this.equipo = new Equipo();
   }
   onSave() {
-    console.log(this.equipoadd);
-    this._equipoServices.addEquipo(this.equipoadd).subscribe(
-      response => {
-        if (response.code === 200) {
-          this._router.navigate(['equipo/list']);
-        } else {
-          console.log(response);
 
-        }
+    this.equipoServices.addEquipo(this.equipo);
+    this.equipo = new Equipo();
 
-      },
-      error => {
-        console.log(<any>error);
-      }
-    );
+
   }
 
 }

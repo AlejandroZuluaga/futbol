@@ -27,26 +27,10 @@ export class ListEquipoComponent implements OnInit {
   public equipo: Equipo[];
 
   constructor(
-    private _route: ActivatedRoute,
-    private _router: Router,
-    private _equipoServices: EquipoServices
+       private equipoServices: EquipoServices
   ) { this.titulo = ' Listado de Equipos '; }
   ngOnInit() {
-    this._equipoServices.getEquipo().subscribe(
-      result => {
-
-        // tslint:disable-next-line:triple-equals
-        if (result.code != 200) {
-          console.log(result);
-        } else {
-          this.equipo = result.data;
-          console.log(result.data);
-        }
-      },
-      error => {
-        console.log(<any>error);
-      }
-    );
+    this.equipoServices.getEquipo();
 
   }
 }
