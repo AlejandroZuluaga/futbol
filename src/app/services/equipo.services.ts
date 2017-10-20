@@ -6,6 +6,7 @@ import { Equipo } from '../equipo/equipo';
 import { HttpClient } from '@angular/common/http';
 
 
+
 @Injectable()
 export class EquipoServices {
     public url: string;
