@@ -14,8 +14,6 @@ export class EquipoServices {
     options: RequestOptions;
 
 
-
-
     constructor(private http: HttpClient) {
 
     }
