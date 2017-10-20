@@ -27,7 +27,6 @@ export class AddEquipoComponent implements OnInit {
     this.equipoServices.addEquipo(this.equipo);
     this.equipo = new Equipo();
 
-
   }
 
 }

@@ -35,6 +35,7 @@ export class ListEquipoComponent implements OnInit {
   }
 }
 
+
 /**
 export class TableFilteringExample implements OnInit {
   displayedColumns = ['userId', 'userName', 'progress', 'color'];

@@ -19,6 +19,7 @@ export class EquipoServices {
 
     }
 
+
     getEquipo() {
         this.http.get('http://localhost:8081/futbolangular/webresources/com.entidades.futbolangular.equipo')
 
