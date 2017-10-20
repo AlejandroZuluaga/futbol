@@ -18,7 +18,7 @@ export class AddEquipoComponent implements OnInit {
     private _route: ActivatedRoute,
     private _router: Router
   ) {
-    this.equipoadd = new Equipo(0, 'Cali', 'Carvajal', 2);
+    this.equipoadd = new Equipo(8, 'Cali', 'Carvajal', 5);
   }
   ngOnInit() {
   }
